@@ -17,7 +17,7 @@ def SimpleBug():
         yPos += randomMove()
         xPos = (xPos + worldXSize) % worldXSize
         yPos = (yPos + worldYSize) % worldYSize
-        print "I moved to X = ", xPos, " Y = ", yPos
+        print("I moved to X = ", xPos, " Y = ", yPos)
 
 # returns -1, 0, 1  with equal probability
 def randomMove():

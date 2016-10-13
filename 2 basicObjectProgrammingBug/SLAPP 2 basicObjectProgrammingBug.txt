@@ -1,0 +1,32 @@
+                FROM PLAIN PROGRAMMIN TO BASIC OBJECT PROGRAMMING
+
+
+This is an object-oriented version of the simple bug program.
+
+The code for the "bug" has been encapsulated in an "object".
+
+We have a new code to "create" a bug, to set its internal
+state, and to tell it to execute  - to "do its thing" over
+and over again. We communicate with the "bug" by sending
+it "messages", using the following syntax.
+
+		aBug.randomWalk()
+
+is a command to send the object "aBug" the message:
+
+     `set your X and Y coords to xPos and yPos'
+
+The instruction 
+
+		aBug = Bug(1, 40, 40) 
+
+is asking the Bug "Class" to give us an instance of a Bug, 
+which we thereafter refer to as "aBug". 
+
+The message aBug.randomWalk() is asking the object "aBug"
+to perform it's major action, taking a random walk - but the 
+code for doing so is hidden from us here. We just ask it to 
+"do its thing", and it does it, whatever it is.
+
+In this case, the "bug" object has four internal variables: xPos,
+yPos, worldXSize, and worldYSize.
