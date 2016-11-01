@@ -51,7 +51,7 @@ The reason is that in Python 3 the concept of unbound method no more exists and 
     >>> f.__qualname__
     'f'
 
-    On a function defined in a class:
+Applied to a function defined in a class, the reply is:
 
     >>> class A():
 	        def m(self):
