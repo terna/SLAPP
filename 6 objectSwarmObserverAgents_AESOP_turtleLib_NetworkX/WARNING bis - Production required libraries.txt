@@ -1,0 +1,19 @@
+To run the ‘production’ application it is necessary to install
+
+matplotlib which is at http://matplotlib.org
+
+and
+
+NetworkX, which is at http://networkx.github.io
+
+
+To run the 'oligopoly' application (it is at https://github.com/terna/oligopoly)
+and, more generally, to use a database tool within SLAPP,
+
+it is necessary to install
+pandas which is at http://pandas.pydata.org
+
+NB
+NetworkX 1.9.1 or greater required
+
+matplotlib 1.5.1 suggested

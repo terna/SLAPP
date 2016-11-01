@@ -1,0 +1,73 @@
+                   ADDING A SWARM
+
+In this version of the program, we create a special
+object called a "model" to take care of creating and
+managing the other objects, as the "bug" agent.
+
+This object isn't really part of the bug's world, it is
+more an object in our world - it encapsulates our "model"
+of the bug and its world, making the model itself a kind
+of "thing" that we can interact with by sending it messages
+and asking it to do things.
+
+For a typical Swarm simulation, you create a top-level
+structure which will manage the tasks of creating, running and
+interacting with our models.  As we don't know, or care really,
+at this level what the model is, we have a regular procedure
+for constructing almost any Model that is independent of the 
+model specifics.
+
+Thus, all of the model particular details have been removed
+from the starting file, and encapsulated in a model object called
+a "modelSwarm". Here in main, as before, we create and
+send messages to the this model object, much as we
+did for the bug objects.
+
+However, a Swarm is a special kind of object. It is likely
+to have a number of objects in it, the objects that
+constitute the various "actors" and "agents" in our models.
+And, it manages the execution of the objects it contains via
+another special class of objects called "ActionGroup".
+
+ActionGroups are essentially structures of messages to be sent
+to objects. A Swarm owns a collection of objects and a
+collection of schedules of events over them.
+
+In the 'start 5 objectSwarmModelBugs.py' we create the modelSwarm, 
+tell it to build its objects and its activities, bind them up together,
+and start them going.
+
+This Model Object is now where the details of the particular
+model we are running are hidden away from other things that
+don't want, or need, to know about them. We can alter things
+in our model without having to disturb other components of
+our whole experiment/simulation.
+
+The schedule is quite compliant in this version to the original Swarm one.
+
+The Tools.py code offers to all modules some useful tools, mainly library access and schedule tools.
+
+What we do here is three things.
+
+First we construct the various objects in the model.
+
+This takes place in the "buildObjects" method.
+
+Second, we arrange for messages to be sent to the objects in
+the right order, but not via for-loops. Rather we create
+passive data-structures containing the messages we want sent -
+or some of them anyway - the ones we know about now.
+This takes place in the "buildActions" method code.
+
+Third, as we may have created a number of such passive message-holding
+data-structures, we arrange for them all to be executed while a (dynamic)
+schedule is running.
+
+NB presently the output of the model is scheduled to be executed only if 
+the n. of cycles is 0 or multiple of 3. 
+
+The agent class Bug is now directly accessed with 
+from Bug import * 
+to avoid writing things like Bug.Bug.
+
+The same with ActionGroup.

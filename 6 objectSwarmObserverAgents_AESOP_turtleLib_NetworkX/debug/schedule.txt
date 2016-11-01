@@ -1,0 +1,6 @@
+# 1
+all checkClock
+# 2
+all checkCloc
+# 3
+all checkSuperClock

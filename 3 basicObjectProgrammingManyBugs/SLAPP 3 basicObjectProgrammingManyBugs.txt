@@ -1,0 +1,30 @@
+                FROM PLAIN PROGRAMMIN TO BASIC OBJECT PROGRAMMING
+				WITH MANY BUGS
+
+
+This is a SECOND object-oriented version of the simple bug program.
+
+The code for the "bug" has been encapsulated in an "object".
+
+We create now nBugs bugs with
+
+bugList = [0] * nBugs
+
+for i in range(nBugs):
+    aBug = Bug(i, random.randint(0,worldXSize-1), \
+                            random.randint(0,worldYSize-1),
+                            worldXSize, worldYSize)
+    bugList[i] = aBug
+
+Other form
+
+bugList = []
+
+for i in range(nBugs):
+    aBug = Bug(i, random.randint(0,worldXSize-1), \
+                            random.randint(0,worldYSize-1),
+                            worldXSize, worldYSize)
+    bugList.append(aBug)
+
+Note that we do not need to memorize the identity of each bug, 
+because we collect them in a list.

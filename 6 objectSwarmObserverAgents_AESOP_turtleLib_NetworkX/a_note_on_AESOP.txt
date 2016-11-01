@@ -1,0 +1,51 @@
+The AESOP (Agents and Emergencies for Simulating Organizations in Python) implementation,
+has the capability of reading the schedule from a text file.
+
+The test file is schedule.txt and its contents are read if we have "read_script"
+steps activated in the schedule of the model.
+
+If the file is finished, further attempt to "read_schedule" have no effect.
+
+We can read more than one command per step.
+
+If we create a xls file, this is used instead of the txt one.
+
+If schedule.xls exist it is interpreted and translated to schedule.txt,
+without the comments.
+
+The script has the capability of broadcasting a method only to a share of the
+instances of a class; see in schedule.xls of the project 'basic' (or
+in schedule.txt) the row 'all 0.5 dance'
+
+We have a WorldState class, interacting with the agents; at present, in the
+'basic' case we have a unique instance of the class, but the code is anyway
+built upon a list of any number of instances of the class
+The variables managed via WordState have to be added, with their methods, within
+the class, following the existing example in project 'basic', where
+WorldState has set/get methods for the variable generalMovingProb
+
+We can have more than one category of AESOP agent (behing the scene, currently
+a unique Agent.py class exists), each defined in a separate file
+(a file can contain also a stand alone agent)
+
+We have also the possibility of creating operating sets, listed in
+agOperatingSets.txt, containing the IDs of agents also of different type;
+the agents of a set are asked to to something together
+
+We have macro instructions, as separate sheets in schedule.xls, to be invoked as
+macro nameOfTheMacro
+
+We can insert empty lines in schedule.xls, to improve readability
+
+the part of agents in a set, effectively acting, can be identified both as an
+individual probability - with a real (floating positive number) - or as an
+absolute  number - expressed as an integer negative number (in case, the acting
+agent/s will be extracted randomly from the specified set)
+
+Via spreadsheet, the code has the the capability of reordering a schedule
+not ordered upon time, with '#   x' rows in macros, with repeated
+action over time in a macro; see the example complicated_schedule.xls in school
+folder; to use it, rename the file (preserving the existing one) to the default
+name: schedule.xls
+
+We have conditional methods, i.e. shakeIf_greenPupil (in scheduleIf.xls)

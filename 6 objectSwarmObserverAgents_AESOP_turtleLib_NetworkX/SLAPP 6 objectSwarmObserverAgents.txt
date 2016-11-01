@@ -1,0 +1,55 @@
+		EMBED THE MODEL SWARM IN AN OBSERVER SWARM
+
+Now we are doing something different at the top level. We have been
+using pretty crude I/O to observe the model's behavior. Now we will
+build another Swarm to encapsulate a bunch of observing
+capability. We are once again encapsulating an aspect of our
+interactions with models, in this case our observations of models, and
+making a kind of "thing" out of them, that we can interact with in a
+number of ways.
+
+Furthermore, we now have a "hierarchy" of nested swarms. Objects can
+clearly encapsulate other objects, and Swarms can encapsulate other
+Swarms. Here the ObserverSwarm will take over the creation of the
+ModelSwarm inside of itself, which in turn will create the bugs,
+foodSpaces, and etc that are internal to it.
+
+With nested hierarchies of Swarms, we also have nested hierarchies of
+model execution, and, in general, Swarms can be arbitrarily deeply
+embedded in such hierarchies. Furthermore, any one Swarm might be
+nurturing a collection of subSwarms, each nurturing further subsets,
+so one can have both deep and broad hierarchies of concurrently
+executing "models" - all modelling different aspects of our
+interactions with models, events, observations, and so forth.
+
+
+
+This code is quite the same of SLAPP 5, but more ordered, being splitted into the Observer and into the Model
+
+At each step of the Observe we have to assure that a step of the Model is executed (made of one or more steps); if unnecessary, we can also imagine to avoid some model step
+
+
+In this example the time schedule is:
+
+Observer ["modelStep", "talk all", "clock"], ["modelStep", "talk one", "clock"], ["modelStep", "talk one", "clock"]
+
+or
+
+Observer ["modelStep"], ["talk all"], ["clock"], ["modelStep"], ["talk one"], ["clock"], ["modelStep"], ["talk one"], ["clock"]
+
+where "modelStep" is a step or a subStep managing the model and "clock" is a step or a subStep managing the time
+
+in our case, "modelStep" starts, in each cycle, the seguence
+["move", "read_script"]
+which is the same of
+["move"], ["read_script"]
+
+"read_script" manages the external schedule, if a schedule.txt or schedule.xls file exists in the same folder; "read_script" can be omitted if no external schedule is used
+
+
+Another  important novelty is the capability of the agents of modifying on the fly the contents of the actionGroups, generating local code to be executed when the actionGroup is activated.
+
+Look at the "move" action in ModelSwarm.py and at the related instructions in the method randomMovement of the Agent.py file.
+
+
+Finally have a look to a_note_on_AESOP.txt report.

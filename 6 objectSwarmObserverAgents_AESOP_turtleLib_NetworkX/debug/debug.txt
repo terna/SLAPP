@@ -1,0 +1,86 @@
+
+Running the project debug with the option debug set to False in
+commonVar.py or missing, we have
+
+
+(...)
+Project name? debug
+debug = False
+(...)
+
+Time = 1
+I'm bland agent # 2:  clock is at  1
+I'm bland agent # 0:  clock is at  1
+I'm bland agent # 1:  clock is at  1
+I'm A agent # 11:  clock is at  1
+I'm A agent # 22:  clock is at  1
+Time = 2
+Warning, method checkCloc does not exist in class Agent
+Time = 3
+I'm bland agent # 1:  clock is at  cannot apply (case 0) method checkSuperClock to agent number 1 of type  bland
+I'm bland agent # 0:  clock is at  cannot apply (case 0) method checkSuperClock to agent number 0 of type  bland
+I'm A agent # 11:  clock is at  cannot apply (case 0) method checkSuperClock to agent number 11 of type  A
+I'm bland agent # 2:  clock is at  cannot apply (case 0) method checkSuperClock to agent number 2 of type  bland
+I'm A agent # 22:  clock is at  cannot apply (case 0) method checkSuperClock to agent number 22 of type  A
+Time = 4
+enter to conclude
+
+checkCloc effectively does not exists as a method (it is a typo in schedule.xls);
+the warning message perfectly identify the problem; the program is anyway running
+
+Then we have several message declaring that it is impossible to apply the method
+checkSuperClock to a few agents; the attempt of communicating that the
+"clock is at" fails
+
+But why? The SLAPP attempt of capturing the errors, is hiding here the Python
+messages explaining what is happening
+
+
+
+Correct the typo writing correctly checkClock and then set debug to True in
+CommonVar.py and run again
+
+We have
+
+
+(...)
+Project name? debug
+debug = True
+(...)
+
+
+Time = 1
+I'm A agent # 11:  clock is at  1
+I'm A agent # 22:  clock is at  1
+I'm bland agent # 0:  clock is at  1
+Time = 2
+I'm A agent # 11:  clock is at  2
+I'm bland agent # 0:  clock is at  2
+I'm A agent # 22:  clock is at  2
+Time = 3
+I'm bland agent # 0:  clock is at
+Traceback (most recent call last):
+  File "start.py", line 39, in <module>
+    observerSwarm.run()
+  File "./$$slapp$$/ObserverSwarm.py", line 103, in run
+    self.modelSwarm.step(common.cycle)
+  File "./$$slapp$$/ModelSwarm.py", line 296, in step
+    self.actionGroup100.do(self,cycle)
+  File "./$$slapp$$/ModelSwarm.py", line 215, in do100
+    self.applyFromSchedule(localList,task)
+  File "./$$slapp$$/ModelSwarm.py", line 334, in applyFromSchedule
+    if common.debug: exec "askEachAgentInCollection(localList,Agent"+"."+task[1]+")"
+  File "<string>", line 1, in <module>
+  File "./$$slapp$$/Tools.py", line 38, in askEachAgentInCollection
+    if common.debug: method(a,**k)
+  File "./debug/Agent.py", line 46, in checkSuperClock
+    print "clock is at ", common.cycles
+AttributeError: 'module' object has no attribute 'cycles'
+
+We discover that the error is due to the use of the attribute cycles supposed
+to be in common, while the correct name is cycles.
+
+
+
+
+[schedule2.xls is only a backup, with all the errors, of schedule.xls]

@@ -1,0 +1,11 @@
+                FROM PLAIN PROGRAMMIN TO BASIC OBJECT PROGRAMMING
+           WITH MANY BUGS, BUG AS AN EXTERNAL CLASS AND LIST SHUFFLING
+
+
+This is a THIRD object-oriented version of the simple bug program.
+
+The code for the "bug" has been encapsulated in an "object" and it is now 
+reported in a separate file.
+
+Bug collection is created as in the previous version; a special use of the 
+list capabilities is shown, randomly shuffling the bug collection.

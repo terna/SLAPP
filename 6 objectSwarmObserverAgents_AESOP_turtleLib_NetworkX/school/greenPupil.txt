@@ -1,0 +1,9 @@
+1 green -125  75 F
+2 green  -75  75 F
+3 green  -25  75 F
+5 green  100  75 F
+8 green -125  25 M
+9 green  -75  25 M
+11 green  50  25 F
+12 green 100  25 F
+13 green 150  25 F

@@ -1,0 +1,72 @@
+--- graphicControl.py	(original)
++++ graphicControl.py	(refactored)
+@@ -24,20 +24,20 @@
+   # support pylab interactive mode, regardless of backend"
+ 
+   if 'idlelib' in sys.modules:
+-     print(
++     print((
+      'Running in IDLE, please start SLAPP using a terminal with\n'+
+-     'python runShell.py\nexecuted being in SLAPP main folder')
++     'python runShell.py\nexecuted being in SLAPP main folder'))
+      os.sys.exit(1)
+ 
+   elif 'spyderlib' in sys.modules:
+-     print(
++     print((
+      'Running in Spyder, please start SLAPP using a terminal with\n'+
+-     'python runShell.py\nexecuted being in SLAPP main folder')
++     'python runShell.py\nexecuted being in SLAPP main folder'))
+      os.sys.exit(1)
+ 
+   else:
+       common.graphicStatus="PythonViaTerminal"
+-      print 'SLAPP started from a terminal'
++      print('SLAPP started from a terminal')
+ 
+ 
+  # running in IPython
+@@ -58,7 +58,7 @@
+    in str(get_ipython()):
+ 
+    common.graphicStatus="PythonViaTerminal"
+-   print 'SLAPP started from a terminal'
++   print('SLAPP started from a terminal')
+ 
+ 
+   # IN a jupyter notebook OR in a Jupyter QtConsole (same effects)
+@@ -67,27 +67,27 @@
+ 
+    # running in IPython with magic '%matplotlib|%pylab' already set,
+    # modified to '%matplotlib inline'
+-   if get_ipython().config.has_key('InlineBackendConfig') and \
++   if 'InlineBackendConfig' in get_ipython().config and \
+       not "backend_inline" in mpl.get_backend():
+-      print "SLAPP running with magic '%matplotlib|%pylab' already set"
++      print("SLAPP running with magic '%matplotlib|%pylab' already set")
+ 
+       get_ipython().magic("%matplotlib inline")
+-      print "'%matplotlib inline' magic command NOW SET"
++      print("'%matplotlib inline' magic command NOW SET")
+       common.graphicStatus="%matplotlib inline"
+ 
+    # running in IPython with magic '%matplotlib inline|%pylab' already set
+-   elif get_ipython().config.has_key('InlineBackendConfig') and \
++   elif 'InlineBackendConfig' in get_ipython().config and \
+       "backend_inline" in mpl.get_backend():
+-      print "running with magic '%matplotlib inline|%pylab inline' already set"
++      print("running with magic '%matplotlib inline|%pylab inline' already set")
+       common.graphicStatus="%matplotlib inline"
+ 
+    # running in IPython without any magic matplotlib already set
+    else:
+-      print "SLAPP starting without any matplotlib magic command"
++      print("SLAPP starting without any matplotlib magic command")
+ 
+       get_ipython().magic("%matplotlib inline")
+ 
+-      print "'%matplotlib inline' magic command NOW SET"
++      print("'%matplotlib inline' magic command NOW SET")
+       common.graphicStatus="%matplotlib inline"
+ 
+   # size of the pictures within an IPython notebook

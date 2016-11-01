@@ -1,0 +1,15 @@
+# 1
+all 0.5 sitDownNotWell
+all 0.5 talk
+# 2
+all payAttention
+all sitDownWell
+yellowPupil sitDownNotWell
+greenPupil -1.0 sitDownNotWell
+all 0.3 fidget
+saPupil 0.8 shake
+greenPupil -1.0 shake
+threeGreen talkClose
+r4r talkClose
+saPupil 0.5 answerBad
+all 0.15 answerWell

@@ -1,0 +1,28 @@
+--- txtxFunctions.py	(original)
++++ txtxFunctions.py	(refactored)
+@@ -7,14 +7,14 @@
+ 
+     pos=s.find("v")
+     if pos == -1:
+-        print "missing 'v' in formula, row", nrow, "\nexecution stopped in error"
++        print("missing 'v' in formula, row", nrow, "\nexecution stopped in error")
+         fIn.close()
+         fOu.close()
+         os.sys.exit(1)
+ 
+     pos=s.find("=")
+     if pos == -1:
+-        print "missing '=' in formula, row", nrow, "\nexecution stopped in error"
++        print("missing '=' in formula, row", nrow, "\nexecution stopped in error")
+         fIn.close()
+         fOu.close()
+         os.sys.exit(1)
+@@ -31,7 +31,7 @@
+         exec(s)
+         return str(v)
+     except:
+-        print "error in formula, row", nrow, "\nexecution stopped in error"
++        print("error in formula, row", nrow, "\nexecution stopped in error")
+         fIn.close()
+         fOu.close()
+         os.sys.exit(1)

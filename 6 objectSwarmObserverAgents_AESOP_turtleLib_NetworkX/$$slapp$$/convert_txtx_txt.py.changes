@@ -1,0 +1,50 @@
+--- convert_txtx_txt.py	(original)
++++ convert_txtx_txt.py	(refactored)
+@@ -52,8 +52,8 @@
+         n1=n2=0 #init. required
+         try: n1=int(sline[0][0:pos])
+         except:
+-            print "no digits or wrong characters on the left of @ in row",nrow,\
+-                  "\nexecution stopped in error."
++            print("no digits or wrong characters on the left of @ in row",nrow,\
++                  "\nexecution stopped in error.")
+             fIn.close()
+             fOu.close()
+             os.sys.exit(1)
+@@ -61,8 +61,8 @@
+ 
+         try: n2=int(sline[0][pos+1:])
+         except:
+-            print "no digits or wrong characters on the right of @ in row",nrow,\
+-                  "\nexecution stopped in error."
++            print("no digits or wrong characters on the right of @ in row",nrow,\
++                  "\nexecution stopped in error.")
+             fIn.close()
+             fOu.close()
+             os.sys.exit(1)
+@@ -76,20 +76,20 @@
+ 
+      for n in range(n1,n2+1):
+         #print "%d " % n,
+-        print >> fOu, "%d " % n,
++        print("%d " % n, end=' ', file=fOu)
+         for i in range(1,len(sline)):
+         #check for the presence of a formula
+             if sline[i].find("=") != -1:
+                     #print "%s " % executeFormula(fIn,fOu,nrow,n,sline[i]),
+-                    print >> fOu, "%s " % executeFormula(fIn,fOu,nrow,n,sline[i]),
++                    print("%s " % executeFormula(fIn,fOu,nrow,n,sline[i]), end=' ', file=fOu)
+             else:
+                     #print "%s " % sline[i],
+-                    print >> fOu, "%s " % sline[i],
++                    print("%s " % sline[i], end=' ', file=fOu)
+         #print
+-        print >> fOu
++        print(file=fOu)
+ 
+ 
+ fIn.close()
+ fOu.close()
+ 
+-print "File", fileName, "converted: .txtx => .txt\n"
++print("File", fileName, "converted: .txtx => .txt\n")
