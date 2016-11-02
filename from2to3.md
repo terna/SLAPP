@@ -98,7 +98,7 @@ As an example, from *Tools.py*:
         exec("test=inspect.isfunction(c."+method+")", space)
         test=space['test']
 
-### Handmade modifications (in *basic* folder)
+### Handmade modifications (in *basic* and *basic2classes* folders)
 
 in *commonVar*
 
