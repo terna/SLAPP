@@ -12,7 +12,9 @@ The first step has been that of using *2to3*, which is part of the Python 2 dist
 
 e.g.  
 
-    my2to3 "start 1 plainProgrammingBug.py"  
+    my2to3 "start 1 plainProgrammingBug.py"
+
+(with the usual chain of ../../ etc. in the beginning and the name of the file quoted if it contains spaces)
 
 produces:
 
@@ -84,7 +86,7 @@ Also the function *applyMethod* has been hand modified due to the modifications 
 
 Always in *Tools.py* we have to manage the new *exec* definition, being now a function (in Python 2 was a statement). At [https://docs.python.org/3/library/functions.html#exec](https://docs.python.org/3/library/functions.html#exec) we read "Pass an explicit locals dictionary if you need to see effects of the code on locals after function exec() returns".
 
-In *applyMethod* we have now *space={}* and *exec* uses it.  
+In *applyMethod* we have now the dictionary *space={}* and *exec* uses it.  
 
 As an example, from *Tools.py*:
 
@@ -103,3 +105,10 @@ As an example, from *Tools.py*:
 in *commonVar*
 
     toBeExecuted="print ('Goodbye')" # added () in print BY HAND
+
+
+### Handmade modifications (in *basic2classes* folder)
+
+Deeply modified the *exec* structure (see also above) in *mActions.py*, function *createTheAgent_Class*, both creating a locals dictionary named *space* and putting the import of the class used to create the agents at the head of *exec* quoted string.  
+
+    exec("from "+agClass+" import *;"+\

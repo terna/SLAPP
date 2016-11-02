@@ -18,8 +18,8 @@ class Agent(SuperAgent):
         # the agent
         self.xPos = xPos
         self.yPos = yPos
-        print "agent", self.agType, "#", self.number, \
-     	      "has been created at", self.xPos, ",", self.yPos
+        print("agent", self.agType, "#", self.number, \
+     	      "has been created at", self.xPos, ",", self.yPos)
 
 
     # ",**d" in the parameter lists of the methods is a place holder
@@ -27,27 +27,27 @@ class Agent(SuperAgent):
 
     # eating
     def eat(self,**d):
-        print "I'm %s agent # %d: " % (self.agType,self.number),
-        print "nothing to eat here!"
+        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
+        print("nothing to eat here!")
 
     # dancing
     def dance(self,**d):
-        print "I'm %s agent # %d: " % (self.agType,self.number),
+        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
         if   self.agType == "tasteA":
-            print "I'm an A, nice to dance here!"
+            print("I'm an A, nice to dance here!")
         elif self.agType == "tasteB":
-            print "I'm a B, not so nice to dance here!"
+            print("I'm a B, not so nice to dance here!")
         elif self.agType == "tasteC":
-            print "I'm a C, why to dance here?"
+            print("I'm a C, why to dance here?")
 
-        else: print "it's not time to dance!"
+        else: print("it's not time to dance!")
 
     # the action, also jumping
     def randomMovement(self,**k):
         if random.random()<=self.myWorldState.getGeneralMovingProb():
-            print "agent %s # %d moving" % (self.agType,self.number)
+            print("agent %s # %d moving" % (self.agType,self.number))
             self.jump=1
-            if k.has_key("jump"): self.jump=k["jump"]
+            if "jump" in k: self.jump=k["jump"]
             dx=randomMove(self.jump)
             self.xPos +=dx
             dy=randomMove(self.jump)
@@ -63,8 +63,8 @@ class Agent(SuperAgent):
 
     # report
     def reportPosition(self,**d):
-        print self.agType, "agent # ", self.number, " is at X = ", \
-               self.xPos, " Y = ", self.yPos
+        print(self.agType, "agent # ", self.number, " is at X = ", \
+               self.xPos, " Y = ", self.yPos)
 
     # adding a task (from v. 1.35 of SLAPP)
     # common is derived importing Tools
@@ -72,8 +72,8 @@ class Agent(SuperAgent):
 
         newTask="all dance"
 
-        print "agent", self.number, "adding a task for cycle", common.cycle + 1
-        if not common.addTasks.has_key(common.cycle + 1):
+        print("agent", self.number, "adding a task for cycle", common.cycle + 1)
+        if common.cycle + 1 not in common.addTasks:
             common.addTasks[common.cycle + 1]=[]
         common.addTasks[common.cycle + 1].append(newTask)
 
@@ -83,9 +83,9 @@ class Agent(SuperAgent):
 
         killTask="tasteC eat"
 
-        print "agent", self.number, "eliminating a task for cycle", \
-                       common.cycle + 2
-        if not common.elimTasks.has_key(common.cycle + 2):
+        print("agent", self.number, "eliminating a task for cycle", \
+                       common.cycle + 2)
+        if common.cycle + 2 not in common.elimTasks:
             common.elimTasks[common.cycle + 2]=[]
         common.elimTasks[common.cycle + 2].append(killTask)
 

@@ -50,34 +50,45 @@ def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
                  self.agentList.append(anAgent)
 
                 else:
-                 print "Error in file "+agType+".txt"
+                 print("Error in file "+agType+".txt")
                  os.sys.exit(1)
 
 def createTheAgent_Class(self,line,num,leftX,rightX,bottomY,topY,agType,agClass):
                 #explictly pass self, here we use a function
                 #print "leftX,rightX,bottomY,topY", leftX,rightX,bottomY,topY
 
+                # check if the file having the content of agClass and extension
+                # .py exists
 
-                # loading classes with repetition (but only creating agents)
-                try: exec("from "+agClass+" import *")
-                except:
-                    print "Class", agClass, "not found."
-                    os.sys.exit(1)
+                common.agClassVerified=False
+                if not common.agClassVerified:
+                    try:
+                        exec("import "+agClass)
+                        common.agClassVerified=True
+                    except:
+                        print("Missing file "+agClass+".py")
+                        os.sys.exit(1)
 
+
+                # first step in exec:
+                # access the files of the classes to create the instances
+                # N.B. to simplify the structure of SLAPP, the name of the
+                # class and the name of the file containing it have to be the same.
                 if len(line.split())==1:
                   try:
-                    exec("anAgent = "+agClass+"(num, self.worldState,"+\
-                          "random.randint(leftX,rightX),"+\
-                          "random.randint(bottomY,topY),"+\
-                          "leftX,rightX,bottomY,topY,agType=agType)")
+                    space={'num':num, 'sW': self.worldState, \
+                           'random':random, 'leftX': leftX, 'rightX': rightX, \
+                           'bottomY': bottomY, 'topY': topY, 'agType': agType}
+                    exec("from "+agClass+" import *;"+\
+                         "anAgent = "+agClass+"(num, sW,"+\
+                         "random.randint(leftX,rightX),"+\
+                         "random.randint(bottomY,topY),"+\
+                         "leftX,rightX,bottomY,topY,agType=agType)", space)
+                    anAgent=space['anAgent']
                     self.agentList.append(anAgent)
                   except:
-                    print "Argument error creating an instance of class",agClass
+                    print("Argument error creating an instance of class",agClass)
                     os.sys.exit(1)
-
-                else:
-                 print "Error in file "+agType+".txt"
-                 os.sys.exit(1)
 
 
 def otherSubSteps(subStep, address):

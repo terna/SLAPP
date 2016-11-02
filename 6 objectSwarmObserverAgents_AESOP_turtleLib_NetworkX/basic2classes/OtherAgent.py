@@ -38,10 +38,10 @@ class OtherAgent(Agent):
 
     # sleeping
     def sleep(self,**d):
-        print "I'm %s agent # %d: " % (self.agType,self.number),
-        print "happy to sleep!"
+        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
+        print("happy to sleep!")
 
     # movement
     def randomMovement(self,**k):
-        print "I'm %s agent # %d: " % (self.agType,self.number),
-        print "absolutely not moving!!!"
+        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
+        print("absolutely not moving!!!")
