@@ -111,4 +111,12 @@ in *commonVar*
 
 Deeply modified the *exec* structure (see also above) in *mActions.py*, function *createTheAgent_Class*, both creating a locals dictionary named *space* and putting the import of the class used to create the agents at the head of *exec* quoted string.  
 
-    exec("from "+agClass+" import *;"+\
+    exec("from "+agClass+" import ... ; ..." 
+
+### random number behavior
+
+Working on *basic* and *basic2classes* we can verify that a sequence of *random.random()* numbers has the same content in Python 2 and in Python 3 if *n* in *random.seed(n)* is the same.
+Unfortunately, *random.shuffle()* behaves in a different way in the two Python versions, as you can read at
+[http://stackoverflow.com/questions/38943038/difference-between-python-2-and-3-for-shuffle-with-a-given-seed](http://stackoverflow.com/questions/38943038/difference-between-python-2-and-3-for-shuffle-with-a-given-seed) and also, after a call to *shuffle* the successive sequence of random realizations will be different in the two Python versions.
+
+Due to this behavior we cannot reproduce in a full detailed way a run of a project in SLAPP working with Python 2 and with Python 3.
