@@ -4,4 +4,4 @@ projectVersion = 1.2
 
 toBeExecuted="print ('Goodbye')" # added () in print BY HAND
 
-debug=True
+debug=False
