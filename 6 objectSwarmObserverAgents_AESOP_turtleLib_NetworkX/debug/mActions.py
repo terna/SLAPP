@@ -37,7 +37,7 @@ def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
                  self.agentList.append(anAgent)
 
                 else:
-                 print "Error in file "+agType+".txt"
+                 print("Error in file "+agType+".txt")
                  os.sys.exit(1)
 
 def otherSubSteps(subStep, address):

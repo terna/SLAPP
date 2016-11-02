@@ -1,0 +1,48 @@
+--- Agent.py	(original)
++++ Agent.py	(refactored)
+@@ -18,8 +18,8 @@
+         # the agent
+         self.xPos = xPos
+         self.yPos = yPos
+-        print "agent", self.agType, "#", self.number, \
+-     	      "has been created at", self.xPos, ",", self.yPos
++        print("agent", self.agType, "#", self.number, \
++     	      "has been created at", self.xPos, ",", self.yPos)
+ 
+ 
+     # ",**d" in the parameter lists of the methods is a place holder
+@@ -27,18 +27,18 @@
+ 
+     # check the clock
+     def checkClock(self,**d):
+-        print "I'm %s agent # %d: " % (self.agType,self.number),
+-        print "clock is at ", common.cycle
++        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
++        print("clock is at ", common.cycle)
+ 
+     # check the superClock
+     def checkSuperClock(self,**d):
+-        print "I'm %s agent # %d: " % (self.agType,self.number),
+-        print "clock is at ", common.cycles
++        print("I'm %s agent # %d: " % (self.agType,self.number), end=' ')
++        print("clock is at ", common.cycles)
+ 
+     # the action, also jumping
+     def randomMovement(self,**k):
+         if random.random()<=self.myWorldState.getGeneralMovingProb():
+-            print "agent %s # %d moving" % (self.agType,self.number)
++            print("agent %s # %d moving" % (self.agType,self.number))
+             self.jump=k["jump"]
+             dx=randomMove(self.jump)
+             self.xPos +=dx
+@@ -54,8 +54,8 @@
+ 
+     # report
+     def reportPosition(self,**d):
+-        print self.agType, "agent # ", self.number, " is at X = ", \
+-               self.xPos, " Y = ", self.yPos
++        print(self.agType, "agent # ", self.number, " is at X = ", \
++               self.xPos, " Y = ", self.yPos)
+ 
+ 
+ # returns -1, 0, 1  with equal probability

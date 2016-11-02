@@ -100,18 +100,21 @@ As an example, from *Tools.py*:
         exec("test=inspect.isfunction(c."+method+")", space)
         test=space['test']
 
-### Handmade modifications (in *basic* and *basic2classes* folders)
+### Handmade modifications (in *basic*, *basic2classes* and *debug* folders)
 
 in *commonVar*
 
     toBeExecuted="print ('Goodbye')" # added () in print BY HAND
 
+or
+
+    toBeExecuted="print ('Goodbye from the debug world.')" # added () in print BY HAND
 
 ### Handmade modifications (in *basic2classes* folder)
 
 Deeply modified the *exec* structure (see also above) in *mActions.py*, function *createTheAgent_Class*, both creating a locals dictionary named *space* and putting the import of the class used to create the agents at the head of *exec* quoted string.  
 
-    exec("from "+agClass+" import ... ; ..." 
+    exec("from "+agClass+" import ... ; ..."
 
 ### random number behavior
 
