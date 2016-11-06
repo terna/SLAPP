@@ -25,7 +25,7 @@ def do2a(address,cycle):
 
             # ask each agent, without parameters
 
-            print "Time = ", cycle, "ask all agents to report position"
+            print("Time = ", cycle, "ask all agents to report position")
             askEachAgentInCollection(address.modelSwarm.getAgentList(),Agent.reportPosition)
 
 
@@ -33,7 +33,7 @@ def do2b(address,cycle):
             self=address # if necessary
 
             # ask a single agent, without parameters
-            print "Time = ",cycle,"ask first agent to report position"
+            print("Time = ",cycle,"ask first agent to report position")
             if address.modelSwarm.getAgentList() != []:
                 askAgent(address.modelSwarm.getAgentList()[0],\
                          Agent.reportPosition)
@@ -41,12 +41,12 @@ def do2b(address,cycle):
 def otherSubSteps(subStep, address):
 
             if subStep == "pause":
-              raw_input ("Hit enter key to continue")
+              input ("Hit enter key to continue")
               return True
 
             elif subStep == "prune":
               common.prune=True
-              newValue=raw_input (("Prune links with weight < %d\n"+\
+              newValue=input (("Prune links with weight < %d\n"+\
                                    "Enter to confirm "+\
                                    "or introduce a new level: ") % \
                                        common.pruneThreshold)

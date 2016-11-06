@@ -37,7 +37,7 @@ def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
                  anAgent.setAgentList(self.agentList)
 
                 else:
-                 print "Error in file "+agType+".txt"
+                 print("Error in file "+agType+".txt")
                  os.sys.exit(1)
 
 def addAFactory(address):
@@ -67,8 +67,8 @@ def addAFactory(address):
                         sector=toBeCloned.sector)
         address.agentList.append(anAgent)
         anAgent.setAgentList(address.agentList)
-        if common.verbose: print "Created factory #",anAgent.number,\
-                                 "in sector",anAgent.sector
+        if common.verbose: print("Created factory #",anAgent.number,\
+                                 "in sector",anAgent.sector)
 
 def removeAFactory(address):
 
@@ -84,8 +84,8 @@ def removeAFactory(address):
           random.shuffle(factoryTmpList)
           toBeRemoved=factoryTmpList[0]
 
-          if common.verbose: print "Removed factory #",toBeRemoved.number,\
-                                 "from sector",toBeRemoved.sector
+          if common.verbose: print("Removed factory #",toBeRemoved.number,\
+                                 "from sector",toBeRemoved.sector)
 
           toBeRemoved.removeItself()
 

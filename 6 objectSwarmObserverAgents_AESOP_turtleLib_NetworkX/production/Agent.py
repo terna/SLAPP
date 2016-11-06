@@ -36,9 +36,9 @@ class Agent(SuperAgent):
 
         # the agent
         if self.agType == "factories":
-         if common.verbose: print "agent of type", self.agType, \
+         if common.verbose: print("agent of type", self.agType, \
                "#", self.number, "has been created at", xPos, ",", yPos, \
-        	      ' in production sector ', self.sector
+        	      ' in production sector ', self.sector)
 
          common.g.add_node(self)
          common.g.node[self]['sector']=sector
@@ -52,8 +52,8 @@ class Agent(SuperAgent):
          self.sector=sector
 
         if self.agType == "recipes":
-         if common.verbose: print "agent of type", self.agType, "#", self.number, \
-        	      "has been created"
+         if common.verbose: print("agent of type", self.agType, "#", self.number, \
+        	      "has been created")
 
 
     # get graph
@@ -76,8 +76,8 @@ class Agent(SuperAgent):
             self.content.append(random.randint(1,self.maxSector))
         self.factoryInWhichRecipeIs=None
 
-        if common.verbose: print "recipe %d now contains the sequence: " \
-                           % (self.number), self.content
+        if common.verbose: print("recipe %d now contains the sequence: " \
+                           % (self.number), self.content)
 
 
     # search for factories
@@ -91,12 +91,12 @@ class Agent(SuperAgent):
         res=gvf.findNodesFromSector(step)
         if common.verbose:
            if res ==[]:
-               print "recipe %d cannot find a factory for the step of type %d"\
-                         % (self.number, step)
+               print("recipe %d cannot find a factory for the step of type %d"\
+                         % (self.number, step))
         else:
            if common.verbose:
-               print "recipe %d found %d factory/ies for the step of type %d"\
-                         % (self.number, len(res), step)
+               print("recipe %d found %d factory/ies for the step of type %d"\
+                         % (self.number, len(res), step))
 
 
         # for debug only!!!!!!!!!!!!!
@@ -106,7 +106,7 @@ class Agent(SuperAgent):
 
         if res !=[]:
             random.shuffle(res)
-            if common.verbose: print "recipe %d moving to factory %d" % (self.number,res[0].number)
+            if common.verbose: print("recipe %d moving to factory %d" % (self.number,res[0].number))
 
 			# future development: here res[0] simply contain a randomly chosen unit
 			# (if in res we have more than a unique possibility)
@@ -141,8 +141,8 @@ class Agent(SuperAgent):
 
         recipe.canMove=False
         self.recipeWaitingList.append(recipe)
-        if common.verbose: print "factory %d waiting list contains %d recipe/s" % \
-                                  (self.number,len(self.recipeWaitingList))
+        if common.verbose: print("factory %d waiting list contains %d recipe/s" % \
+                                  (self.number,len(self.recipeWaitingList)))
 
         #update factory label
         #the try below is not subject to debug
@@ -168,15 +168,15 @@ class Agent(SuperAgent):
         if len(currentRecipe.content)==1:
              self.recipeWaitingList.remove(currentRecipe)
 
-        if common.verbose: print "factory %d producing (recipe %d)" % (self.number, currentRecipe.number)
+        if common.verbose: print("factory %d producing (recipe %d)" % (self.number, currentRecipe.number))
 
         currentRecipe.content.pop(0)
         currentRecipe.canMove=True
 
         if currentRecipe.content == []:
             currentRecipe.canMove=False
-            if common.verbose: print "recipe %d completed in factory %d" \
-                  % (currentRecipe.number,self.number)
+            if common.verbose: print("recipe %d completed in factory %d" \
+                  % (currentRecipe.number,self.number))
 
 
     # addAFactory
@@ -199,16 +199,16 @@ class Agent(SuperAgent):
                         agType=toBeCloned.agType,
                         sector=toBeCloned.sector)
         self.agentList.append(anAgent)
-        if common.verbose: print "Factory", self.number, "has created factory #",\
-                                  anAgent.number,"in sector",anAgent.sector
+        if common.verbose: print("Factory", self.number, "has created factory #",\
+                                  anAgent.number,"in sector",anAgent.sector)
 
     # remove itself
     def removeItself(self):
         if self.agType != "factories": return
 
         toBeRemoved=self
-        if common.verbose: print "Factory #",toBeRemoved.number,\
-                                 "removed itself from sector",toBeRemoved.sector
+        if common.verbose: print("Factory #",toBeRemoved.number,\
+                                 "removed itself from sector",toBeRemoved.sector)
         self.agentList.remove(toBeRemoved)
 
         #print "removeItself verification of surviving agents"
@@ -227,7 +227,7 @@ class Agent(SuperAgent):
         if edges_toBeDropped != []:
             for edge in edges_toBeDropped:
                #print "removeItself edge removed in graph", edge
-               if common.g_edge_labels.has_key(edge):
+               if edge in common.g_edge_labels:
                    common.g_edge_labels.pop(edge)
 
         #print "removeItself previous nodes in graph", common.g.nodes()

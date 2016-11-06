@@ -123,3 +123,7 @@ Unfortunately, *random.shuffle()* behaves in a different way in the two Python v
 [http://stackoverflow.com/questions/38943038/difference-between-python-2-and-3-for-shuffle-with-a-given-seed](http://stackoverflow.com/questions/38943038/difference-between-python-2-and-3-for-shuffle-with-a-given-seed) and also, after a call to *shuffle* the successive sequence of random realizations will be different in the two Python versions.
 
 Due to this behavior we cannot reproduce in a full detailed way a run of a project in SLAPP working with Python 2 and with Python 3.
+
+### Handmade modifications (in *production* folder)
+
+Found an inconsistent use of tabs and spaces in indentation in line 23 and 36 of *parameters.py* file.  
