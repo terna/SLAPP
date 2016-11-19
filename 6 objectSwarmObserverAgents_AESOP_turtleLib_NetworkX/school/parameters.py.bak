@@ -2,21 +2,21 @@
 from Tools import *
 
 def loadParameters(self):
-  mySeed = eval(input("random number seed (1 to get it from the clock) "))
+  mySeed = input("random number seed (1 to get it from the clock) ")
   if mySeed == 1:
         random.seed()
   else:
         random.seed(mySeed)
         
   self.nAgents = 0
-  print("No 'bland' agents")
+  print "No 'bland' agents"
 
   #self.worldXSize= input("X size of the world? ")
   self.worldXSize=400
-  print("X size of the world? ", self.worldXSize)
+  print "X size of the world? ", self.worldXSize
 
   #self.worldYSize= input("Y size of the world? ")
   self.worldYSize=400
-  print("Y size of the world? ", self.worldYSize)
+  print "Y size of the world? ", self.worldYSize
 
-  self.nCycles = eval(input("How many cycles? (0 = exit) "))
+  self.nCycles = input("How many cycles? (0 = exit) ")

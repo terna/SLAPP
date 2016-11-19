@@ -37,7 +37,7 @@ def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
                  anAgent.setColorAndGender(line.split()[1],"") #brown, no gender,
                                                                # it is a desk
                 else:
-                 print "Error in file "+agType+".txt"
+                 print("Error in file "+agType+".txt")
                  os.sys.exit(1)
 
 def otherSubSteps(subStep, address):

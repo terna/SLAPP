@@ -6,7 +6,7 @@ all payAttention
 all sitDownWell
 yellowPupil sitDownNotWell
 greenPupil -1.0 sitDownNotWell
-all 0.3 fidget
+all 0.30000000000000004 fidget
 saPupil 0.8 shake
 greenPupil -1.0 shake
 threeGreen talkClose

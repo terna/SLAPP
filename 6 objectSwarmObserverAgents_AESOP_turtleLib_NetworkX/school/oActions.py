@@ -48,10 +48,10 @@ def do2a(address,cycle):
             for a in address.modelSwarm.getAgentList():
                 #print "agent", a.number, "attention = ",a.getAttention()
                 self.v_.append(a.getAttentionAndCleanStep())
-            print 'attention index for each pupil =',
+            print('attention index for each pupil =', end=' ')
             for i in range(len(self.n_)):
-                print "["+str(self.n_[i])+","+str(self.v_[i])+"] ",
-            print 
+                print("["+str(self.n_[i])+","+str(self.v_[i])+"] ", end=' ')
+            print() 
 
             self.p.penup()
             self.p.black(-250,150)
@@ -75,7 +75,7 @@ def do2b(address,cycle):
             self=address # if necessary
             
             # ask a single agent, without parameters
-            print "Time = ",cycle,"ask first agent to report position"
+            print("Time = ",cycle,"ask first agent to report position")
             if address.modelSwarm.getAgentList() != []:
                 askAgent(address.modelSwarm.getAgentList()[0],\
                          Agent.reportPosition)
