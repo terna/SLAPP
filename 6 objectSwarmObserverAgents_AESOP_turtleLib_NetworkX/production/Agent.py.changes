@@ -90,10 +90,10 @@
  
  
      # addAFactory
-@@ -199,16 +199,16 @@
-                         agType=toBeCloned.agType,
-                         sector=toBeCloned.sector)
-         self.agentList.append(anAgent)
+@@ -206,16 +206,16 @@
+         # udating the agentList in the ModelSwarm instance
+         common.modelAddress.agentList=self.agentList
+ 
 -        if common.verbose: print "Factory", self.number, "has created factory #",\
 -                                  anAgent.number,"in sector",anAgent.sector
 +        if common.verbose: print("Factory", self.number, "has created factory #",\
@@ -110,8 +110,8 @@
 +                                 "removed itself from sector",toBeRemoved.sector)
          self.agentList.remove(toBeRemoved)
  
-         #print "removeItself verification of surviving agents"
-@@ -227,7 +227,7 @@
+         # updating the agentList of all the agents
+@@ -241,7 +241,7 @@
          if edges_toBeDropped != []:
              for edge in edges_toBeDropped:
                 #print "removeItself edge removed in graph", edge

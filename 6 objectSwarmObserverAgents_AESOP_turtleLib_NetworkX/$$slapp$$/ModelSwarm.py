@@ -31,6 +31,9 @@ class ModelSwarm:
         global task, project
         project=project0
 
+        # putting in common the address of the ModelSwarm instance
+        common.modelAddress=self
+
         # the environment
         task="0 0".split() #in case of repeated execution without restarting the shell
         self.ff="" #in case of repeated execution without restarting the shell

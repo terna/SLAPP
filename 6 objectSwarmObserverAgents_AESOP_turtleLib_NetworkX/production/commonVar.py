@@ -2,6 +2,8 @@
 prune=False
 pruneThreshold=0
 
+#debug=True
+
 g=0             #this variable will contain the address of the graph
 g_labels=0      #this variable will contain the address of the labels
 g_edge_labels=0 #this variable will contain the address of the labels of the edges

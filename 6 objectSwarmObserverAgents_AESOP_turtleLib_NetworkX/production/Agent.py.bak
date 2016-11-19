@@ -199,6 +199,13 @@ class Agent(SuperAgent):
                         agType=toBeCloned.agType,
                         sector=toBeCloned.sector)
         self.agentList.append(anAgent)
+        # updating the agentList of all the agents
+        for anAg in self.agentList:
+            anAg.setAgentList(self.agentList) # in this way, also the new agent
+                                              # has its agentList (updated)
+        # udating the agentList in the ModelSwarm instance
+        common.modelAddress.agentList=self.agentList
+
         if common.verbose: print "Factory", self.number, "has created factory #",\
                                   anAgent.number,"in sector",anAgent.sector
 
@@ -210,6 +217,13 @@ class Agent(SuperAgent):
         if common.verbose: print "Factory #",toBeRemoved.number,\
                                  "removed itself from sector",toBeRemoved.sector
         self.agentList.remove(toBeRemoved)
+
+        # updating the agentList of all the agents
+        for anAg in self.agentList:
+            anAg.setAgentList(self.agentList) # in this way, also the new agent
+                                              # has its agentList (updated)
+        # udating the agentList in the ModelSwarm instance
+        common.modelAddress.agentList=self.agentList
 
         #print "removeItself verification of surviving agents"
         #for i in range(len(self.agentList)):
