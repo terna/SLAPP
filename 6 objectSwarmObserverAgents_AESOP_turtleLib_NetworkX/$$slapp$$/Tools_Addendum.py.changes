@@ -1,0 +1,29 @@
+--- Tools_Addendum.py	(original)
++++ Tools_Addendum.py	(refactored)
+@@ -7,7 +7,7 @@
+               except:
+                   try: v0 = int(vv[0][0:1])
+                   except:
+-                      print "error in lib",name,"not regular version number"
++                      print("error in lib",name,"not regular version number")
+                       os.sys.exit(1)
+       if v0>k0: return True
+ 
+@@ -18,7 +18,7 @@
+               except:
+                   try: v1 = int(vv[1][0:1])
+                   except:
+-                      print "error in lib",name,"not regular version number"
++                      print("error in lib",name,"not regular version number")
+                       os.sys.exit(1)
+           if v0==k0 and v1>k1: return True
+ 
+@@ -29,7 +29,7 @@
+              except:
+                  try: v2 = int(vv[2][0:1])
+                  except:
+-                     print "error in lib",name,"not regular version number"
++                     print("error in lib",name,"not regular version number")
+                      os.sys.exit(1)
+           if v0==k0 and v1==k1 and v2>=k2: return True
+ 

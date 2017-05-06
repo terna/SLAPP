@@ -14,7 +14,7 @@ e.g.
 
     my2to3 "start 1 plainProgrammingBug.py"
 
-(with the usual chain of ../../ etc. in the beginning and the name of the file quoted if it contains spaces)
+(with the usual chain of ../../ etc. in the beginning (before my2to3) and the name of the file quoted if it contains spaces)
 
 produces:
 
@@ -100,6 +100,8 @@ As an example, from *Tools.py*:
         exec("test=inspect.isfunction(c."+method+")", space)
         test=space['test']
 
+The function *checkVersion(version,name,k0,k1,k2)* has been added in v. 1.6.3 and verified from 2 to 3 via the temporary file *Tools_Addendum.py*
+
 ### Handmade modifications (in *basic*, *basic2classes* and *debug* folders)
 
 in *commonVar*
@@ -127,3 +129,5 @@ Due to this behavior we cannot reproduce in a full detailed way a run of a proje
 ### Handmade modifications (in *production* folder)
 
 Found an inconsistent use of tabs and spaces in indentation in line 23 and 36 of *parameters.py* file.  
+
+Modified by hands, for v.1.6.3, in *parameters.py* file, the control of the versions of the libraries NetworkX and Matplotlib
