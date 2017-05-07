@@ -1,4 +1,4 @@
-October/November 2016
+October/November 2016; May 2017
 
 ## **Moving to Python 3**
 
@@ -131,3 +131,11 @@ Due to this behavior we cannot reproduce in a full detailed way a run of a proje
 Found an inconsistent use of tabs and spaces in indentation in line 23 and 36 of *parameters.py* file.  
 
 Modified by hands, for v.1.6.3, in *parameters.py* file, the control of the versions of the libraries NetworkX and Matplotlib
+
+### Handmade modifications (in *start.py* file)
+
+Temporary eliminated the version number (???py3), keeping updated the build date
+
+Added the copy of the project name in common, block starting with
+    # project reported in common for possible uses in other SLAPP segments or
+    # applications

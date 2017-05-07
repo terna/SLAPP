@@ -12,7 +12,7 @@
 
 def runSLAPP():
  global start_pyDir
- print("SLAPP ???py3 build 20170506")
+ print("SLAPP ???py3 build 20170507")
  import os
 
 
@@ -63,6 +63,14 @@ def runSLAPP():
 
   gc.graphicControl()
   #print common.graphicStatus
+
+  # project reported in common for possible uses in other SLAPP segments or
+  # applications
+  # it contains (i) or the path (relative to the start.py position) of a project
+  # existing within the SLAPP hierarchy, or (ii) the absolute path to a project
+  # placed outside
+  common.project=project
+
 
   common.IPython=tl.checkRunningIn()
   if common.IPython: print("running in IPython")
