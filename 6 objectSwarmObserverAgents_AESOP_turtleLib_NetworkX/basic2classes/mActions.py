@@ -38,24 +38,22 @@ def do1(address):
             # the other one is maintained for compatibility with
             # previous mActions.py files
 
-def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
+def createTheAgent(self,line,num,agType):
                 #explictly pass self, here we use a function
-                #print "leftX,rightX,bottomY,topY", leftX,rightX,bottomY,topY
 
-                if len(line.split())==1:
+                if len(line.split())==1: # weak control, can be improved
                  anAgent = Agent(num, self.worldState,
-                          random.randint(leftX,rightX),
-                          random.randint(bottomY,topY),
-                          leftX,rightX,bottomY,topY,agType=agType)
+                          random.randint(self.leftX,self.rightX),
+                          random.randint(self.bottomY,self.topY),
+                          self.leftX,self.rightX,self.bottomY,self.topY,agType=agType)
                  self.agentList.append(anAgent)
 
                 else:
                  print("Error in file "+agType+".txt")
                  os.sys.exit(1)
 
-def createTheAgent_Class(self,line,num,leftX,rightX,bottomY,topY,agType,agClass):
+def createTheAgent_Class(self,line,num,agType,agClass):
                 #explictly pass self, here we use a function
-                #print "leftX,rightX,bottomY,topY", leftX,rightX,bottomY,topY
 
                 # check if the file having the content of agClass and extension
                 # .py exists
@@ -73,12 +71,12 @@ def createTheAgent_Class(self,line,num,leftX,rightX,bottomY,topY,agType,agClass)
                 # first step in exec:
                 # access the files of the classes to create the instances
                 # N.B. to simplify the structure of SLAPP, the name of the
-                # class and the name of the file containing it have to be the same.
-                if len(line.split())==1:
+                # class and the name of the file containing it, have to be the same.
+                if len(line.split())==1: # weak control, can be improved
                   try:
                     space={'num':num, 'sW': self.worldState, \
-                           'random':random, 'leftX': leftX, 'rightX': rightX, \
-                           'bottomY': bottomY, 'topY': topY, 'agType': agType}
+                           'random':random, 'leftX': self.leftX, 'rightX': self.rightX, \
+                           'bottomY': self.bottomY, 'topY': self.topY, 'agType': agType}
                     exec("from "+agClass+" import *;"+\
                          "anAgent = "+agClass+"(num, sW,"+\
                          "random.randint(leftX,rightX),"+\

@@ -24,7 +24,7 @@ produces:
 
 The correction done in this way are mainly related to *print* and *input* statements
 
-### Handmade modifications (in *$$slapp$$* folder)
+### Handmade modifications in *$$slapp$$* folder
 
 ##### convert_xls_txt.py
 
@@ -102,9 +102,22 @@ As an example, from *Tools.py*:
 
 The function *checkVersion(version,name,k0,k1,k2)* has been added in v. 1.6.3 and verified from 2 to 3 via the temporary file *Tools_Addendum.py*
 
-### Handmade modifications (in *basic*, *basic2classes* and *debug* folders)
 
-in *commonVar*
+In *ModelSwarm.py*
+
+Modifications related to the new agent creation structure of v.1.6.2
+
+after
+    # this block is not alway useful, but (...)
+
+ and in
+
+     if self.classes[agType]=="Agent":
+
+
+### Handmade modifications in *basic*, *basic2classes*, *basicSpecialAction* and *debug* folders
+
+in *commonVar.py*
 
     toBeExecuted="print ('Goodbye')" # added () in print BY HAND
 
@@ -112,27 +125,38 @@ or
 
     toBeExecuted="print ('Goodbye from the debug world.')" # added () in print BY HAND
 
-### Handmade modifications (in *basic2classes* folder)
+### Handmade modifications in *basic2classes* folder
 
 Deeply modified the *exec* structure (see also above) in *mActions.py*, function *createTheAgent_Class*, both creating a locals dictionary named *space* and putting the import of the class used to create the agents at the head of *exec* quoted string.  
 
     exec("from "+agClass+" import ... ; ..."
 
-### random number behavior
+### Handmade modifications in *basic*, *basic2classes*, *debug*, *production*, and *school* folders
 
-Working on *basic* and *basic2classes* we can verify that a sequence of *random.random()* numbers has the same content in Python 2 and in Python 3 if *n* in *random.seed(n)* is the same.
+NB, not in *basicSpecialAction*, created directly with the new agent creation feature
+
+Modifications related with the new agent creation structure (v.1.6.2)
+
+in *mActions.py* of *basic*, *basic2classes*, *debug*, *production*, and *school*
+modified the creation block
+(for *basic2classes* also the creation with classes, via *createTheAgent_Class*)
+
+
+### A note on random number behavior
+
+Working on *basic*, *basic2classes*, *basicSpecialAction* and *debug* we can verify that a sequence of *random.random()* numbers has the same content in Python 2 and in Python 3 if *n* in *random.seed(n)* is the same.
 Unfortunately, *random.shuffle()* behaves in a different way in the two Python versions, as you can read at
 [http://stackoverflow.com/questions/38943038/difference-between-python-2-and-3-for-shuffle-with-a-given-seed](http://stackoverflow.com/questions/38943038/difference-between-python-2-and-3-for-shuffle-with-a-given-seed) and also, after a call to *shuffle* the successive sequence of random realizations will be different in the two Python versions.
 
 Due to this behavior we cannot reproduce in a full detailed way a run of a project in SLAPP working with Python 2 and with Python 3.
 
-### Handmade modifications (in *production* folder)
+### Handmade modifications in *production* folder
 
 Found an inconsistent use of tabs and spaces in indentation in line 23 and 36 of *parameters.py* file.  
 
 Modified by hands, for v.1.6.3, in *parameters.py* file, the control of the versions of the libraries NetworkX and Matplotlib
 
-### Handmade modifications (in *start.py* file)
+### Handmade modifications in *start.py* file
 
 Temporary eliminated the version number (???py3), keeping updated the build date
 

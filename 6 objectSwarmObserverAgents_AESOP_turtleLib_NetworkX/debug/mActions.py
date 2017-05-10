@@ -25,15 +25,14 @@ def do1(address):
                      (address.agentListCopy,Agent.randomMovement,
                                         jump=random.uniform(0,5))
 
-def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
+def createTheAgent(self,line,num,agType):
                 #explictly pass self, here we use a function
-                #print "leftX,rightX,bottomY,topY", leftX,rightX,bottomY,topY
 
-                if len(line.split())==1:
+                if len(line.split())==1: # weak control, can be improved
                  anAgent = Agent(num, self.worldState,
-                          random.randint(leftX,rightX),
-                          random.randint(bottomY,topY),
-                          leftX,rightX,bottomY,topY,agType=agType)
+                           random.randint(self.leftX,self.rightX),
+                           random.randint(self.bottomY,self.topY),
+                           self.leftX,self.rightX,self.bottomY,self.topY,agType=agType)
                  self.agentList.append(anAgent)
 
                 else:

@@ -30,9 +30,9 @@ def createTheAgent(self,line,num,agType):
 
                 if len(line.split())==1: # weak control, can be improved
                  anAgent = Agent(num, self.worldState,
-                           random.randint(self.leftX,self.rightX),
-                           random.randint(self.bottomY,self.topY),
-                           self.leftX,self.rightX,self.bottomY,self.topY,agType=agType)
+                          random.randint(self.leftX,self.rightX),
+                          random.randint(self.bottomY,self.topY),
+                          self.leftX,self.rightX,self.bottomY,self.topY,agType=agType)
                  self.agentList.append(anAgent)
 
                 else:

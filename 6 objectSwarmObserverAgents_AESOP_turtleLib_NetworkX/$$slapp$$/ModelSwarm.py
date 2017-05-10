@@ -106,18 +106,22 @@ class ModelSwarm:
         else:
             self.worldState=0
 
-        leftX =int(-self.worldXSize/2)
-        rightX=int(self.worldXSize-1 -self.worldXSize/2)
-        bottomY =int(-self.worldYSize/2)
-        topY=int(self.worldYSize-1 -self.worldYSize/2)
+        # this block is not always useful, but if not necessary does not hurt
+        self.leftX =int(-self.worldXSize/2)
+        self.rightX=int(self.worldXSize-1 -self.worldXSize/2)
+        self.bottomY =int(-self.worldYSize/2)
+        self.topY=int(self.worldYSize-1 -self.worldYSize/2)
 
         # internal agents (bland ones)
+        # the specialized creation function, related to the project,
+        # stays in mActions.py, in the model folder
+
         for i in range(self.nAgents):
-            anAgent = Agent(i, self.worldState,
-                    random.randint(leftX,rightX),
-                    random.randint(bottomY,topY), leftX,rightX,
-                    bottomY,topY,agType="bland")
-            self.agentList.append(anAgent)
+            # line='x' creates a dummy input line to keep generalized
+            # the structure of the createTheAgent function
+            line="x"
+            createTheAgent(self,line,i,agType="bland")
+            #self.agentList.append(anAgent) internal to mAnctions.py
         print()
 
         # external agents, RELATED TO THE SPECIFIC project
@@ -143,7 +147,7 @@ class ModelSwarm:
                "agents: lacking the specific file", opSet+".txt")
         print()
 
-        # crating the agents
+        # creating the agents
         for agType in self.types:
 
          if agType+".txt" in files:
@@ -161,12 +165,12 @@ class ModelSwarm:
                # are in mActions.py in the model folder
 
                if self.classes[agType]=="Agent":
-                 createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType)
+                 createTheAgent(self,line,num,agType)
                  #explictly pass self, here we use a function
 
                else:
                  # using ad hoc classes
-                 createTheAgent_Class(self,line,num,leftX,rightX,bottomY,topY,\
+                 createTheAgent_Class(self,line,num,\
                         agType,self.classes[agType]) # the last is the class
 
 

@@ -17,7 +17,7 @@ def do1(address):
             # always the same sequence
             random.shuffle(address.agentListCopy)
 
-def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
+def createTheAgent(self,line,num,agType):
                 #explicitly pass self, here we use a function
 
                 # recipes

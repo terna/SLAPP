@@ -18,13 +18,14 @@ def do1(address):
             # always the same sequence
             random.shuffle(address.agentListCopy)
 
-def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
+def createTheAgent(self,line,num,agType):
                 #explicitly pass self, here we use a function
                 if len(line.split())==5 and line.split()[1] != 'brown':
                  anAgent = Agent(num, self.worldState,
                           int(line.split()[2]),
                           int(line.split()[3]),
-                          leftX,rightX,bottomY,topY,agType=agType)
+                          self.leftX,self.rightX,self.bottomY,\
+                          self.topY,agType=agType)
                  self.agentList.append(anAgent)
                  anAgent.setColorAndGender(line.split()[1],line.split()[4])
 
@@ -32,7 +33,8 @@ def createTheAgent(self,line,num,leftX,rightX,bottomY,topY,agType):
                  anAgent = Agent(num, self.worldState,
                           int(line.split()[2]),
                           int(line.split()[3]),
-                          leftX,rightX,bottomY,topY,agType=agType)
+                          self.leftX,self.rightX,self.bottomY,\
+                          self.topY,agType=agType)
                  #not added to agentList
                  anAgent.setColorAndGender(line.split()[1],"") #brown, no gender,
                                                                # it is a desk

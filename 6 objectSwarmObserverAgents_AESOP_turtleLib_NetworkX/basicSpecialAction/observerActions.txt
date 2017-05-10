@@ -1,0 +1,3 @@
+specialAction modelStep ask_all clock
+specialAction modelStep ask_one clock
+specialAction modelStep ask_one clock
