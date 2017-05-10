@@ -12,7 +12,7 @@
 
 def runSLAPP():
  global start_pyDir
- print("SLAPP transition_tp_python3 build 20170510")
+ print("\nSLAPP transition_tp_python3 build 20170511\n")
  import os
 
 
