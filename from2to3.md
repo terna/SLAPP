@@ -37,7 +37,7 @@ using *key*, already existing in Python 2, with
 
     ll.sort(key=lambda x: x[0])
 
-##### Tools.py
+##### Tools.py, with a technical digression on methods and functions
 
 *my2to3* has automatically modified the former *extractMethod* function, but that function is now completely different and named *extractMethodFromMethodFunction*
 

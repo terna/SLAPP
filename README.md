@@ -11,10 +11,10 @@ We have here also a [**Reference Handbook**](https://github.com/terna/SLAPP/blob
 
 Five chapters of the book of Boero, R., Morini, M., Sonnessa, M., and Terna, P.,  [Agent-based Models of the Economy - From Theories to Applications](http://www.palgrave.com/page/detail/agentbased-models-of-the-economy-/?K=9781137339805), are related to SLAPP.
 
-We have also a [SLAPP online](http://slapp-online.net:6789) running version to simplify
+We have also the [SLAPP online 1](http://slapp-online.net:6789) and [SLAPP online 2](https://slapp.hopto.org:6789) running versions, aimed to simplify
 the initial knowledge of SLAPP; write to *pietro.terna at unito.it* to obtain an access.
 
-In October 2016 I taught a course on *Agent-Based Simulation* for the [Master in Data Science for Complex Economic Systems, MADAS](http://www.madas.carloalberto.org/) and for the [Vilfredo Pareto Doctorate in Economics](http://www.sde.unito.it/). I have introduced SLAPP both as a tutorial in agent-based programming and a simulation shell, with some comparative references to NetLogo. Look [here](http://terna.to.it/sim/2016/) at the contents and videos of the course; have also a preliminary look to the [_README.txt](http://terna.to.it/sim/2016/_README.txt) file.  
+In October 2016 I taught a course on *Agent-Based Simulation* for the [Master in Data Science for Complex Economic Systems, MADAS](http://www.madas.carloalberto.org/) and for the [Vilfredo Pareto Doctorate in Economics](http://www.sde.unito.it/). I have introduced SLAPP both as a tutorial in agent-based programming and a simulation shell, with some comparative references to NetLogo. Look [here](http://terna.to.it/sim/2016/) for the contents and videos of the course; have also a preliminary look to the [_README.txt](http://terna.to.it/sim/2016/_README.txt) file.  
 The file 2.mp4 of lesson 4 contains, from minute 41, a short introduction to the use of SLAPP online.
 
 ---
@@ -31,7 +31,7 @@ To start **running the agent-based shell**, read the content of the file
 
 1 - launch the application "basic" as in the following window:
 
-<img src="./-pictures/t1.png" />
+<img src="./-pictures/t1b.png" />
 
 the effect is (plain text output only):
 
@@ -41,7 +41,7 @@ or
 
 2 - launch the application "school" as in the following window:
 
-<img src="./-pictures/t3.png" />
+<img src="./-pictures/t3b.png" />
 
 the effect is (plain text output):
 
@@ -55,7 +55,7 @@ or
 
 3 - launch the application "production" as in the following window:
 
-<img src="./-pictures/t6.png" />
+<img src="./-pictures/t6b.png" />
 
 the effect is (plain text output):
 
