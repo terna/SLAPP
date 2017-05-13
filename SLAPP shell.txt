@@ -1,0 +1,31 @@
+You are supposed to have downloaded SLAPP as a zip file and to have unzipped it.
+
+SLAPP, as Swarm-Like Agent Protocol in Python, has its full implementation
+in folder # 6, “6 objectSwarmObserverAgents_AESOP_turtleLib_NetworkX”.
+
+You can use it as an agent-based shell, keeping unmodified its basic structure,
+contained into the $$slapp$$ folder.
+
+Install the required libraries (as explained in the two "warning files"
+the you find in the folder # 6 and, above all, in the Appendix A of the
+Reference Handbook that you can find in the main folder of the SLAPP
+distribution).
+
+Then, from the main folder of SLAPP, run
+
+python runShell.py
+
+and chose one of the three project examples:
+
+basic
+
+school
+
+production
+
+(For a graphical presentation, please look at README.md in the main SLAPP folder.)
+
+There are also a 'debug' project and a 'basic2classes' one: have a look
+to the Reference Manual for their contents.
+
+Alternatively, you can use Jupyter to run SLAPP: loot at README.md
