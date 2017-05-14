@@ -15,7 +15,6 @@ def runSLAPP():
  print("\nSLAPP v.3.0 build 20170514\n")
  import os
 
-
  confirm="n"
  found=False
  start_pyDir=os.getcwd()
