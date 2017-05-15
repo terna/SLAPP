@@ -28,14 +28,16 @@ def executeFormula(fIn,fOu,nrow,n,s):
                 s=s[:pos+1]+s[pos+2:]
 
         #print "[",n, s,"]",
-        exec(s)
+        d=dict([('n',n),('v',0)])
+        exec(s,d)
+        v=d['v']
         return str(v)
     except:
         print("error in formula, row", nrow, "\nexecution stopped in error")
         fIn.close()
         fOu.close()
         os.sys.exit(1)
-        
+
 def fill(s):
 
     s=list(s)
@@ -48,9 +50,9 @@ def fill(s):
     for i in range(len(s)):
         if s[i]=='&':
             if not change: change=True
-            else:          change=False 
+            else:          change=False
         if s[i]==' '  and change: s[i]='&'
-        
+
     return "".join(s)
 
 def splitUnfill(s):
@@ -69,4 +71,4 @@ def splitUnfill(s):
         #print s_tmp
         s[i]="".join(s_tmp)
 
-    return s    
+    return s

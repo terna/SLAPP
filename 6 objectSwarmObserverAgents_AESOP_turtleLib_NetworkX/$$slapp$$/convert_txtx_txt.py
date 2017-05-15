@@ -25,6 +25,7 @@ n and v are mandatory names
 & starts and concludes a formula
 
 we can have more than one formula in a row
+(but we can have more than a row)
 
 """
 
