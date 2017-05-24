@@ -163,3 +163,7 @@ Temporary eliminated the version number (???py3), keeping updated the build date
 Added the copy of the project name in common, block starting with
     # project reported in common for possible uses in other SLAPP segments or
     # applications
+
+### Handmade modifications in *txtxFunctions.py* file
+
+Modified the exec structure, with a dictionary

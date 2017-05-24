@@ -280,3 +280,7 @@ The next version, with 3.0 number, will be running in **Python 3**
 Folder *7 (toBeDeveloped_aFewHints)* is no more useful and has not reported (but you can find it until v.2.0)
 
 Transition notes into the file *from2to3.md* with a technical part dedicated to a **digression on methods and functions** in Python 3
+
+(2017 05 15)
+
+3.0.1  Fixing .txtx file translation
