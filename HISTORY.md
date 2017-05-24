@@ -281,6 +281,4 @@ Folder *7 (toBeDeveloped_aFewHints)* is no more useful and has not reported (but
 
 Transition notes into the file *from2to3.md* with a technical part dedicated to a **digression on methods and functions** in Python 3
 
-(2017 05 15)
-
-3.0.1  Fixing .txtx file translation
+Fixing also .txtx file translation
