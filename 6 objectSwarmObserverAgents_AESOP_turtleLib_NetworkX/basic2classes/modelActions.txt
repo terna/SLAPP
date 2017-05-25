@@ -1,1 +1,0 @@
-reset move read_script

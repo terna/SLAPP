@@ -1,3 +1,0 @@
-#!/bin/bash
-2to3 -W "$1" > changes
-mv changes "$1".changes

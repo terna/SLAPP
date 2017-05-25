@@ -1,3 +1,0 @@
-modelStep visualizeNet pause clock
-modelStep visualizeNet pause clock
-modelStep prune visualizeNet pause clock
