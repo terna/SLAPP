@@ -1,4 +1,4 @@
-SLAPP <img src="./-pictures/slapp-logo.png" height="90" />
+SLAPP <img src="./slapp-logo.png" height="90" />
 =====
 
 
