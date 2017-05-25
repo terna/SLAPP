@@ -10,7 +10,7 @@ What version of Python do you use?
 
 ***Swarm-Like Agent Protocol in Python***
 
-At [SLAPP 3](https://github.com/terna/SLAPP3), you have SLAPP running in Python 3 (in the [SLAPP repository](http://terna.to.it/slapp_dep/) you have a lot related material and a large set of old versions; more recent ones are here in the Git; the 2.0.x version is the last one related to Python 2).
+At [SLAPP 3](https://github.com/terna/SLAPP3), you have SLAPP running in Python 3 (in the [SLAPP repository](http://terna.to.it/slapp_dep/) you have a lot related material and a large set of old versions; the 2.0.x version is the last one related to Python 2).
 
 We have here also a [**Reference Handbook**](https://github.com/terna/SLAPP/blob/v.3.0/SLAPP_Reference_Handbook.pdf) (it is still a draft and has to be improved).
 
