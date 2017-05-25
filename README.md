@@ -3,9 +3,9 @@ SLAPP <img src="./slapp-logo.png" height="90" />
 
 What version of Python do you use?
 
-****[SLAPP3](https://github.com/terna/SLAPP3) is in Python 3****
+****[SLAPP3](https://github.com/terna/SLAPP3) uses Python 3****
 
-****[SLAPP2](https://github.com/terna/SLAPP2) is in Python 2****
+****[SLAPP2](https://github.com/terna/SLAPP2) uses Python 2****
 
 
 ***Swarm-Like Agent Protocol in Python***
