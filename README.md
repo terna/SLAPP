@@ -26,4 +26,6 @@ The file 2.mp4 of lesson 4 contains, from minute 41, a short introduction to the
 SLAPP logo: credits to [Steve Rogers](https://www.linkedin.com/in/shrogers).
 
 ---
-# **A poster about SLAPP**
+### A poster about SLAPP
+
+<img src="./SLAPP_poster.png" />
