@@ -16,6 +16,8 @@ We have here also a [**Reference Handbook**](https://github.com/terna/SLAPP/blob
 
 Five chapters of the book of Boero, R., Morini, M., Sonnessa, M., and Terna, P.,  [Agent-based Models of the Economy - From Theories to Applications](http://www.palgrave.com/page/detail/agentbased-models-of-the-economy-/?K=9781137339805), are related to SLAPP.
 
+A recent paper ([Business Cycle in a Macromodel with Oligopoly and Agents' Heterogeneity: An Agent-Based Approach, 2017](https://link.springer.com/epdf/10.1007/s40797-017-0058-y?author_access_token=vjDZsvCU0oSWIIYZ3I29c_e4RwlQNchNByi7wbcMAY7_M5DUq8hCn77TEQ7dIoockg0M5bs0KRNXV7xG9MosbmD22MVHEyYi2Hagw-CHS6AIbo9_gdi2cn_YQ9rtzqbZqjqBJQ0qb2sTTlyZLgGMUw==()) of M.Mazzoli, M.Morini, and P.Terna, is using SLAPP as agent-based modeling shell.
+
 We have also a [SLAPP online](https://slapp.hopto.org:6789) running version, aimed to simplify
 the initial knowledge of SLAPP; write to *pietro.terna at unito.it* to obtain an access.
 
