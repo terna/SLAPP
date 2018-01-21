@@ -12,7 +12,7 @@ What version of Python do you use?
 
 At [SLAPP 3](https://terna.github.io/SLAPP3), you have SLAPP running in Python 3 (in the [SLAPP repository](http://terna.to.it/slapp_dep/) you have a lot related material and a large set of old versions; the [2.0](https://terna.github.io/SLAPP2).x version is the last one related to Python 2).
 
-We have here also a [**Reference Handbook**](https://github.com/terna/SLAPP/blob/master/SLAPP_Reference_Handbook.pdf) (it is still a draft and has to be improved).
+We have here also a [**Reference Handbook**](https://github.com/terna/SLAPP3/blob/master/SLAPP_Reference_Handbook.pdf) (it is still a draft and has to be improved).
 
 Five chapters of the book of Boero, R., Morini, M., Sonnessa, M., and Terna, P.,  [Agent-based Models of the Economy - From Theories to Applications](http://www.palgrave.com/page/detail/agentbased-models-of-the-economy-/?K=9781137339805), are related to SLAPP.
 
