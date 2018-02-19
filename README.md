@@ -20,6 +20,8 @@ A recent paper [(Business Cycle in a Macromodel with Oligopoly and Agents' Heter
 
 We have also a [running version of SLAPP](https://beta.mybinder.org/v2/gh/terna/SLAPP3/master?filepath=iRunShellOnline.ipynb), via the wonderful [Binder project](https://beta.mybinder.org/): try it!
 
+Alternatively, and always online, [access the file system](https://beta.mybinder.org/v2/gh/terna/SLAPP3/master) to explore the possible modifications.
+
 In October 2016 I taught a course on *Agent-Based Simulation* for the [Master in Data Science for Complex Economic Systems, MADAS](http://www.madas.carloalberto.org/) and for the [Vilfredo Pareto Doctorate in Economics](http://www.sde.unito.it/). I have introduced SLAPP both as a tutorial in agent-based programming and a simulation shell, with some comparative references to NetLogo. Look [here](http://terna.to.it/sim/2016/) for the contents and videos of the course; have also a preliminary look to the [_README.txt](http://terna.to.it/sim/2016/_README.txt) file.  
 The file 2.mp4 of lesson 4 contains, from minute 41, a short introduction to the use of SLAPP online.
 
