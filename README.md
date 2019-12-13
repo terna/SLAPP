@@ -16,7 +16,9 @@ We have here also a [**Reference Handbook**](https://github.com/terna/SLAPP3/blo
 
 Five chapters of the book of Boero, R., Morini, M., Sonnessa, M., and Terna, P.,  [Agent-based Models of the Economy - From Theories to Applications](http://www.palgrave.com/page/detail/agentbased-models-of-the-economy-/?K=9781137339805), are related to SLAPP.
 
-A recent paper [(Business Cycle in a Macromodel with Oligopoly and Agents' Heterogeneity: An Agent-Based Approach, 2017)](https://link.springer.com/epdf/10.1007/s40797-017-0058-y?author_access_token=vjDZsvCU0oSWIIYZ3I29c_e4RwlQNchNByi7wbcMAY7_M5DUq8hCn77TEQ7dIoockg0M5bs0KRNXV7xG9MosbmD22MVHEyYi2Hagw-CHS6AIbo9_gdi2cn_YQ9rtzqbZqjqBJQ0qb2sTTlyZLgGMUw==) of M.Mazzoli, M.Morini, and P.Terna, is using SLAPP as agent-based modeling shell.
+The new book of Mazzoli, M., Morini, M., and Terna, P., [ Rethinking Macroeconomics with Endogenous Market Structure](https://www.cambridge.org/gb/academic/subjects/economics/macroeconomics-and-monetary-economics/rethinking-macroeconomics-endogenous-market-structure?format=HB&isbn=9781108482608) is deeply based on SLAPP.
+
+The paper [Business Cycle in a Macromodel with Oligopoly and Agents' Heterogeneity: An Agent-Based Approach, 2017](https://link.springer.com/epdf/10.1007/s40797-017-0058-y?author_access_token=vjDZsvCU0oSWIIYZ3I29c_e4RwlQNchNByi7wbcMAY7_M5DUq8hCn77TEQ7dIoockg0M5bs0KRNXV7xG9MosbmD22MVHEyYi2Hagw-CHS6AIbo9_gdi2cn_YQ9rtzqbZqjqBJQ0qb2sTTlyZLgGMUw==), of M.Mazzoli, M.Morini, and P.Terna, is related to SLAPP too.
 
 We have also a [running version of SLAPP](https://beta.mybinder.org/v2/gh/terna/SLAPP3/master?filepath=iRunShellOnline.ipynb), via the wonderful [Binder project](https://beta.mybinder.org/): try it!
 
